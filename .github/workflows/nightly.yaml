@@ -18,7 +18,7 @@ name: Nightly
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -38,7 +38,7 @@ jobs:
       arguments: --all-features --locked --exclude-dev
 
   test-all-features:
-    uses: eclipse-uprotocol/ci-cd/.github/workflows/rust-test-featurematrix.yaml@main
+    uses: ValtechMobility/uprotocol-ci-cd/.github/workflows/rust-test-featurematrix.yaml@main
 
   x-build:
     # The jury is still out on whether this actually adds any value, besides simply being possible...
